@@ -1,0 +1,65 @@
+:root {
+  --bg-size: 400%;
+  --colour-one: rgb(220, 136, 220);
+  --colour-two: rgb(21, 99, 209);
+  --colour-three: rgb(50, 28, 105);
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  display: flex;
+  justify-content: center;
+  background-color: #191920;
+}
+
+.text {
+  display: flex;
+  font-size: clamp(3rem, 20vmin, 10rem);
+  animation: move-bg 10s infinite linear;
+  color: transparent;
+  width: 100%;
+  justify-content: center;
+}
+
+@keyframes move-bg {
+  to {
+    background-position: var(--bg-size) 0;
+  }
+}
+
+.colour-container {
+  display: flex;
+  width: 100%;
+  flex-direction: row;
+  justify-content: space-between;
+  color: white;
+}
+
+.button-container {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-end;
+  height: 30px;
+  width: 90vw;
+}
+
+.button {
+  height: 100%;
+  color: #1563d1;
+  background-color: #323245;
+  border: none;
+  border-radius: 10;
+  box-shadow: none;
+  margin-right: 10;
+}
+
+.not-home-text {
+  color: white;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
+}
